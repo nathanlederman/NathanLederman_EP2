@@ -1,0 +1,131 @@
+
+"""
+Created on Wed Mar 25 15:50:10 2015
+
+@author: marcos
+"""
+import random
+a = arquivo = open("entrada.txt", encoding = "UTF-8")
+
+lista=arquivo.readlines()
+listalimpa=[]
+for i in range(len(lista)-1):
+    listalimpa.append(lista[i].strip())
+print(listalimpa)
+x= random.choice(listalimpa)
+from unicodedata import normalize
+def formatar(txt):
+    return normalize("NFKD",txt).encode("ASCII","ignore").decode("ASCII")
+if __name__=="__main__":
+        from doctest import testmod
+        testmod()
+y= formatar(x)    
+print(x)
+
+
+    
+import turtle               # Usa a biblioteca de turtle graphics
+window = turtle.Screen()    # cria uma janela
+window.bgcolor("lightblue")
+window.title("Poligonos")
+
+tartaruga   = turtle.Turtle()  # Cria um objeto "desenhador"
+tartaruga.speed(5)  # define a velocidade
+tartaruga.penup()       # Remova e veja o que acontece
+tartaruga.setpos(50,0)
+tartaruga.pendown()
+tartaruga.color("orange")
+#window.textinput("caixa de texto", 'digite a letra')
+
+
+for i in range(1):
+    
+    tartaruga.forward(100)
+    tartaruga.backward(50)
+    tartaruga.left(90)
+    tartaruga.forward(300)
+    tartaruga.right(90)
+    tartaruga.forward(100)
+    tartaruga.backward(25)
+    tartaruga.right(90)
+    tartaruga.forward(50)
+def head():
+    tartaruga.penup()
+    tartaruga.setpos(150,225)
+    tartaruga.pendown()
+    tartaruga.circle(25)
+    tartaruga.penup()
+    tartaruga.setpos(175,200)
+def body():
+    tartaruga.pendown()
+    tartaruga.forward(100)
+    tartaruga.backward(60)
+def arm1():
+    tartaruga.left(45)
+    tartaruga.forward(50)
+    tartaruga.backward(50)
+def arm2():    
+    tartaruga.left(275)
+    tartaruga.forward(50)
+    tartaruga.backward(50)
+def leg1():
+    tartaruga.left(40)
+    tartaruga.forward(60)
+    tartaruga.left(45)
+    tartaruga.forward(75)
+    tartaruga.backward(75)
+def leg2():  
+    tartaruga.left(275)
+    tartaruga.forward(75)
+    tartaruga.backward(75)
+    tartaruga.penup()
+    tartaruga.setpos
+    
+guess=0
+while guess==0:
+    pergunta1 = str(window.textinput("caixa de texto", 'digite a letra'))
+    if pergunta1 in x:
+        print("parabens")
+    else:
+        head()
+while guess==1:
+    pergunta2 = str(window.textinput("caixa de texto", 'digite a letra'))
+    if pergunta2 in x:
+        print("parabens")
+    else:
+        body()
+while guess==2: 
+     pergunta3 = str(window.textinput("caixa de texto", 'digite a letra'))
+     if pergunta3 in x:
+         print("parabens")
+     else:
+        arm1()
+while guess==3:
+    pergunta4 = str(window.textinput("caixa de texto", 'digite a letra'))
+    if pergunta4 in x:
+        print("parabens")
+    else:
+        arm2()
+while guess==4:
+    pergunta5 = str(window.textinput("caixa de texto", 'digite a letra'))
+    if pergunta5 in x:
+        print("parabens")
+    else:
+        leg1()
+while guess==5:
+    pergunta6 = str(window.textinput("caixa de texto", 'digite a letra'))
+    if pergunta6 in x:
+        print("parabens")
+    else:
+        leg2()
+      
+        
+        
+        
+        
+        
+            
+        
+        
+        
+    
